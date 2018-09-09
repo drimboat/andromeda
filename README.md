@@ -1,2 +1,0 @@
-# andromeda
-In development
