@@ -10,7 +10,7 @@ const typeDefs = `
 const resolvers = {
     Query: {
         hi(){
-            return "Hello world!";
+            return "Stuff";
         }
     }
 }
