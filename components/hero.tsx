@@ -34,7 +34,7 @@ export default function Hero() {
   const [proposalImage, setProposalImage] = useState("https://giphy.com/embed/wsySkjPDNC6vC");
   const [acceptWidth, setAcceptWidth] = useState(100);
   const [rejectWidth, setRejectWidth] = useState(100);
-  const [display, setDisplay] = useState("visible");
+  const [display, setDisplay] = useState("i");
   const [fontSize, setFontSize] = useState("initial");
 
   function handleReject() {
@@ -49,7 +49,7 @@ export default function Hero() {
       setProposalImage("https://giphy.com/embed/Sp7IpE95BqzOU")
     } else if (count == textIdeas.length) {
       setProposalImage("https://giphy.com/embed/F99PZtJC8Hxm0")
-      setDisplay("hidden")
+      setDisplay("none")
       setProposalText("OH")
     }
 
@@ -59,7 +59,7 @@ export default function Hero() {
 
   function handleAccept() {
     setProposalText("❤ Yayyyy ❤")
-    setDisplay("hidden")
+    setDisplay("none")
     setProposalImage("https://giphy.com/embed/GcJN2Dz5XMDeM")
   }
   return (
@@ -78,7 +78,7 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4" data-aos="fade-up">{proposalText}</h1>
             <div style={{height: '300px', pointerEvents: 'none', margin: '0 15px'}}><iframe src={proposalImage} title="cow" width="100%" height="100%" style={{ pointerEvents: 'none'}}></iframe></div>
-            <div className="sm:max-w-none sm:flex sm:justify-center" style={{marginTop: '15px', visibility: display}}>
+            <div className="sm:max-w-none sm:flex sm:justify-center" style={{marginTop: '15px', display: display}}>
               
             <div data-aos="fade-up" data-aos-delay="600" onClick={() => handleReject()}>
                 <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full mb-4 sm:w-auto sm:mb-0" style={{width: rejectWidth+'px', height: rejectWidth/2+'px', minWidth: 'max-content', fontSize: fontSize}}>{rejectText}</a>
