@@ -80,11 +80,11 @@ export default function Hero() {
             <div style={{height: '300px', pointerEvents: 'none', margin: '0 15px'}}><iframe src={proposalImage} title="cow" width="100%" height="100%" style={{ pointerEvents: 'none'}}></iframe></div>
             <div className="sm:max-w-none sm:flex sm:justify-center" style={{marginTop: '15px', display: display}}>
               
-            <div data-aos="fade-up" data-aos-delay="600" onClick={() => handleReject()}>
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full mb-4 sm:w-auto sm:mb-0" style={{width: rejectWidth+'px', height: rejectWidth/2+'px', minWidth: 'max-content', fontSize: fontSize}}>{rejectText}</a>
+            <div data-aos="fade-up" data-aos-delay="600" onClick={() => handleAccept()}>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" style={{width: acceptWidth+'px', height: acceptWidth/2+'px'}}>Yes</a>
               </div>
-              <div data-aos="fade-up" data-aos-delay="400" onClick={() => handleAccept()}>
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full  sm:w-auto sm:ml-4" style={{width: acceptWidth+'px', height: acceptWidth/2+'px'}}>Yes</a>
+            <div data-aos="fade-up" data-aos-delay="400" onClick={() => handleReject()}>
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" style={{width: rejectWidth+'px', height: rejectWidth/2+'px', minWidth: 'max-content', fontSize: fontSize}}>{rejectText}</a>
               </div>
             </div>
           </div>
