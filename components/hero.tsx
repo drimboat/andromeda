@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 import Image from 'next/image'
-import BackgroundImage from '@/public/images/background.svg'
+import BackgroundImage from '/public/images/background.svg'
 
 const textIdeas = [
   "No?",
